@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logika - MoonDevs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        pre { font-family: 'Fira Code', monospace; margin: 0; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md px-6 py-4">
+        <div class="mx-auto max-w-4xl flex items-center gap-4">
+            <a href="index.html" class="flex items-center justify-center rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            </a>
+            <div class="h-6 w-[1px] bg-slate-700"></div>
+            <h1 class="text-lg font-bold">Materi: <span class="text-purple-500">Operator Logika</span></h1>
+        </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-4xl px-6 py-10 flex-grow">
+        
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm text-center">
+            <header class="flex flex-col items-center gap-3 mb-6">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-600/20 text-purple-400">
+                    <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white">Operator Logika</h2>
+            </header>
+            <p class="text-slate-300 leading-relaxed mx-auto max-w-2xl">
+                Operator logika digunakan untuk menggabungkan atau membalik kondisi yang menghasilkan nilai boolean.
+            </p>
+        </article>
+
+        <section class="space-y-10">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded bg-purple-500/20 text-purple-400 font-mono font-bold">&&</span>
+                    <h3 class="text-xl font-bold text-white">Operator AND</h3>
+                </div>
+                <p class="text-slate-400 mb-4">Hasilnya <strong>true</strong> hanya jika semua kondisi bernilai true.</p>
+                <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl">
+                    <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                        <span>logika_and.dart</span>
+                        <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                    </div>
+                    <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">bool</span> nilaiLulus = <span class="text-[#569cd6]">true</span>;
+  <span class="text-[#569cd6]">bool</span> absenBagus = <span class="text-[#569cd6]">true</span>;
+
+  <span class="text-[#6a9955]">// Syarat: Lulus DAN Absen Bagus</span>
+  <span class="text-[#dcdcaa]">print</span>(nilaiLulus && absenBagus); <span class="text-[#6a9955]">// true</span>
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded bg-purple-500/20 text-purple-400 font-mono font-bold">||</span>
+                    <h3 class="text-xl font-bold text-white">Operator OR</h3>
+                </div>
+                <p class="text-slate-400 mb-4">Hasilnya <strong>true</strong> jika salah satu saja kondisi bernilai true.</p>
+                <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl">
+                    <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                        <span>logika_or.dart</span>
+                        <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                    </div>
+                    <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">bool</span> lulusUjian = <span class="text-[#569cd6]">false</span>;
+  <span class="text-[#569cd6]">bool</span> ikutRemedial = <span class="text-[#569cd6]">true</span>;
+
+  <span class="text-[#6a9955]">// Syarat: Lulus Ujian ATAU ikut Remedial</span>
+  <span class="text-[#dcdcaa]">print</span>(lulusUjian || ikutRemedial); <span class="text-[#6a9955]">// true</span>
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded bg-purple-500/20 text-purple-400 font-mono font-bold">!</span>
+                    <h3 class="text-xl font-bold text-white">Operator NOT</h3>
+                </div>
+                <p class="text-slate-400 mb-4">Digunakan untuk membalik nilai boolean.</p>
+                <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl">
+                    <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                        <span>logika_not.dart</span>
+                        <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                    </div>
+                    <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">bool</span> sedangLogin = <span class="text-[#569cd6]">false</span>;
+
+  <span class="text-[#dcdcaa]">print</span>(!sedangLogin); <span class="text-[#6a9955]">// true</span>
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center mt-auto">
+        <p class="text-slate-500 text-sm">Materi MoonDev &copy; 2025. Jangan lupa makan biar ngga laper.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function copyCode(btn) {
+            const code = btn.closest('.overflow-hidden').querySelector('pre').innerText;
+            navigator.clipboard.writeText(code);
+            btn.innerText = 'Copied!';
+            setTimeout(() => btn.innerText = 'Copy', 1500);
+        }
+    </script>
+</body>
+</html>

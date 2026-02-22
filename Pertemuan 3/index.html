@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow & Looping - MoonDevs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        code: {
+                            bg: '#1e1e1e',
+                            header: '#2d2d2d',
+                            text: '#d4d4d4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        pre { font-family: 'Fira Code', monospace; margin: 0; line-height: 1.6; }
+        .token-keyword { color: #569cd6; }
+        .token-function { color: #dcdcaa; }
+        .token-string { color: #ce9178; }
+        .token-comment { color: #6a9955; }
+        .token-number { color: #b5cea8; }
+        .section-card { border: 1px solid #334155; background: rgba(30, 41, 59, 0.5); border-radius: 1rem; padding: 2rem; margin-bottom: 3rem; backdrop-filter: blur(4px); }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md px-6 py-4">
+        <div class="mx-auto max-w-4xl flex items-center gap-4">
+            <a href="index.html" class="flex items-center justify-center rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            </a>
+            <div class="h-6 w-[1px] bg-slate-700"></div>
+            <h1 class="text-lg font-bold text-slate-200">Materi: <span class="text-blue-500">Control Flow & Looping</span></h1>
+        </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-4xl px-6 py-10 flex-grow">
+        
+        <div class="mb-12 text-center">
+            <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600/20 text-blue-400 mb-4">
+                <i data-lucide="git-branch" class="w-10 h-10"></i>
+            </div>
+            <h2 class="text-4xl font-extrabold text-white mb-4">Control Flow & Looping</h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto italic">
+                "Control Flow adalah cara program mengatur alur eksekusi kode."
+            </p>
+        </div>
+
+        <section class="mb-20">
+            <div class="flex items-center gap-3 mb-8 border-l-4 border-blue-500 pl-4">
+                <h2 class="text-2xl font-bold text-white uppercase tracking-tight">1. Percabangan (Conditional Statement)</h2>
+            </div>
+            <p class="text-slate-300 mb-8">Percabangan digunakan untuk menjalankan blok kode berdasarkan kondisi (<code class="text-blue-400">true</code> atau <code class="text-blue-400">false</code>).</p>
+
+            <div class="section-card">
+                <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+                    <i data-lucide="help-circle" class="w-5 h-5"></i> A. If, Else If, dan Else
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="space-y-3">
+                        <p class="text-sm"><strong class="text-white">if</strong> → Mengecek kondisi utama.</p>
+                        <p class="text-sm"><strong class="text-white">else if</strong> → Mengecek kondisi tambahan jika sebelumnya salah.</p>
+                        <p class="text-sm"><strong class="text-white">else</strong> → Dijalankan jika semua kondisi salah.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700 text-xs leading-relaxed">
+                        <p class="font-bold text-blue-400 mb-2 underline tracking-widest uppercase">Cara Kerja:</p>
+                        <ol class="list-decimal list-inside space-y-1 text-slate-300">
+                            <li>Membaca kondisi dari atas ke bawah.</li>
+                            <li>Jika <code class="text-blue-300">true</code>, blok dijalankan.</li>
+                            <li>Pengecekan berhenti setelah kondisi benar ditemukan.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                
+
+[Image of if-else-if flow chart]
+
+
+                <div class="overflow-hidden rounded-xl border border-slate-700 bg-[#1e1e1e] shadow-2xl">
+                    <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2.5">
+                        <div class="flex gap-1.5 items-center">
+                            <div class="h-3 w-3 rounded-full bg-[#ff5f56]"></div><div class="h-3 w-3 rounded-full bg-[#ffbd2e]"></div><div class="h-3 w-3 rounded-full bg-[#27c93f]"></div>
+                            <span class="ml-2 text-xs font-mono text-slate-400 italic">cek_suhu.dart</span>
+                        </div>
+                        <button onclick="copyCode(this)" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors">
+                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy
+                        </button>
+                    </div>
+                    <div class="p-5 overflow-x-auto text-sm text-[#d4d4d4]">
+<pre><span class="token-keyword">void</span> <span class="token-function">main</span>() {
+  <span class="token-keyword">double</span> suhu = <span class="token-number">38.5</span>;
+
+  <span class="token-keyword">if</span> (suhu >= <span class="token-number">38</span>) {
+    <span class="token-function">print</span>(<span class="token-string">"Kamu Demam"</span>);
+  } <span class="token-keyword">else if</span> (suhu >= <span class="token-number">37</span>) {
+    <span class="token-function">print</span>(<span class="token-string">"Suhu Normal Tinggi"</span>);
+  } <span class="token-keyword">else</span> {
+    <span class="token-function">print</span>(<span class="token-string">"Kamu Sehat"</span>);
+  }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+                    <i data-lucide="list-checks" class="w-5 h-5"></i> B. Switch Case
+                </h3>
+                <p class="text-sm text-slate-300 mb-6">Switch digunakan untuk memilih aksi berdasarkan nilai yang sudah pasti secara langsung (bukan logika perbandingan besar/kecil).</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="text-center p-3 bg-slate-800 rounded-lg border border-slate-700"><p class="text-xs font-bold text-blue-400 mb-1">switch</p><p class="text-[10px] text-slate-400 text-balance">Variabel yang diperiksa</p></div>
+                    <div class="text-center p-3 bg-slate-800 rounded-lg border border-slate-700"><p class="text-xs font-bold text-blue-400 mb-1">case</p><p class="text-[10px] text-slate-400 text-balance">Nilai pembanding</p></div>
+                    <div class="text-center p-3 bg-slate-800 rounded-lg border border-slate-700"><p class="text-xs font-bold text-blue-400 mb-1">break</p><p class="text-[10px] text-slate-400 text-balance">Hentikan proses</p></div>
+                    <div class="text-center p-3 bg-slate-800 rounded-lg border border-slate-700"><p class="text-xs font-bold text-blue-400 mb-1">default</p><p class="text-[10px] text-slate-400 text-balance">Pilihan terakhir</p></div>
+                </div>
+
+                <div class="overflow-hidden rounded-xl border border-slate-700 bg-[#1e1e1e] shadow-2xl">
+                    <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2.5">
+                        <div class="flex gap-1.5 items-center"><div class="h-3 w-3 rounded-full bg-[#ff5f56]"></div><div class="h-3 w-3 rounded-full bg-[#ffbd2e]"></div><div class="h-3 w-3 rounded-full bg-[#27c93f]"></div><span class="ml-2 text-xs font-mono text-slate-400 italic">cek_grade.dart</span></div>
+                        <button onclick="copyCode(this)" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"><i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy</button>
+                    </div>
+                    <div class="p-5 overflow-x-auto text-sm text-[#d4d4d4]">
+<pre><span class="token-keyword">void</span> <span class="token-function">main</span>() {
+  <span class="token-keyword">String</span> grade = <span class="token-string">'B'</span>;
+
+  <span class="token-keyword">switch</span> (grade) {
+    <span class="token-keyword">case</span> <span class="token-string">'A'</span>:
+      <span class="token-function">print</span>(<span class="token-string">"Istimewa"</span>);
+      <span class="token-keyword">break</span>;
+    <span class="token-keyword">case</span> <span class="token-string">'B'</span>:
+      <span class="token-function">print</span>(<span class="token-string">"Bagus"</span>);
+      <span class="token-keyword">break</span>;
+    <span class="token-keyword">default</span>:
+      <span class="token-function">print</span>(<span class="token-string">"Tetap Semangat"</span>);
+  }
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex items-center gap-3 mb-8 border-l-4 border-blue-500 pl-4">
+                <h2 class="text-2xl font-bold text-white uppercase tracking-tight">2. Perulangan (Looping)</h2>
+            </div>
+            <p class="text-slate-300 mb-10">Digunakan untuk menjalankan kode yang sama secara berulang-ulang sampai kondisi berhenti terpenuhi.</p>
+
+            <div class="section-card">
+                <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2"><i data-lucide="refresh-ccw" class="w-5 h-5"></i> A. For Loop</h3>
+                <p class="text-sm text-slate-400 mb-6">Digunakan jika <strong>jumlah perulangan sudah diketahui</strong> di awal.</p>
+
+                
+
+[Image of for loop flow chart]
+
+
+                <div class="overflow-hidden rounded-xl border border-slate-700 bg-[#1e1e1e] shadow-2xl mb-4">
+                    <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2.5">
+                        <div class="flex gap-1.5 items-center"><div class="h-3 w-3 rounded-full bg-[#ff5f56]"></div><div class="h-3 w-3 rounded-full bg-[#ffbd2e]"></div><div class="h-3 w-3 rounded-full bg-[#27c93f]"></div><span class="ml-2 text-xs font-mono text-slate-400 italic">for_example.dart</span></div>
+                        <button onclick="copyCode(this)" class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"><i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy</button>
+                    </div>
+                    <div class="p-5 overflow-x-auto text-sm text-[#d4d4d4]">
+<pre><span class="token-keyword">void</span> <span class="token-function">main</span>() {
+  <span class="token-keyword">for</span> (<span class="token-keyword">int</span> i = <span class="token-number">1</span>; i <= <span class="token-number">5</span>; i++) {
+    <span class="token-function">print</span>(<span class="token-string">"Angka $i"</span>);
+  }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="section-card mb-0">
+                    <h3 class="text-lg font-bold text-blue-400 mb-3 flex items-center gap-2"><i data-lucide="play" class="w-4 h-4"></i> B. While Loop</h3>
+                    <p class="text-xs text-slate-400 mb-4">Digunakan jika jumlah perulangan belum pasti dan bergantung kondisi.</p>
+                    <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] mb-4">
+                        <div class="p-4 text-xs font-mono">
+                            <span class="token-keyword">while</span> (baterai > <span class="token-number">0</span>) {<br>
+                            &nbsp;&nbsp;<span class="token-function">print</span>(<span class="token-string">"Nyala"</span>);<br>
+                            &nbsp;&nbsp;baterai--;<br>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card mb-0">
+                    <h3 class="text-lg font-bold text-blue-400 mb-3 flex items-center gap-2"><i data-lucide="fast-forward" class="w-4 h-4"></i> C. Do-While Loop</h3>
+                    <p class="text-xs text-slate-400 mb-4">Minimal dijalankan <strong>satu kali</strong> sebelum mengecek kondisi.</p>
+                    <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] mb-4">
+                        <div class="p-4 text-xs font-mono">
+                            <span class="token-keyword">do</span> {<br>
+                            &nbsp;&nbsp;<span class="token-function">print</span>(<span class="token-string">"Angka: $a"</span>);<br>
+                            &nbsp;&nbsp;a++;<br>
+                            } <span class="token-keyword">while</span> (a <= <span class="token-number">3</span>);
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2"><i data-lucide="layers" class="w-5 h-5"></i> D. For-In Loop</h3>
+                <p class="text-sm text-slate-400 mb-6">Khusus digunakan untuk mengakses elemen dalam <code class="text-blue-300">List</code> atau koleksi data.</p>
+                <div class="overflow-hidden rounded-xl border border-slate-700 bg-[#1e1e1e]">
+                    <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2.5">
+                        <div class="flex gap-1.5 items-center"><div class="h-3 w-3 rounded-full bg-[#ff5f56]"></div><div class="h-3 w-3 rounded-full bg-[#ffbd2e]"></div><div class="h-3 w-3 rounded-full bg-[#27c93f]"></div><span class="ml-2 text-xs font-mono text-slate-400 italic">belanja.dart</span></div>
+                    </div>
+                    <div class="p-5 text-sm text-[#d4d4d4]">
+<pre><span class="token-keyword">var</span> belanjaan = [<span class="token-string">'Beras'</span>, <span class="token-string">'Telur'</span>];
+
+<span class="token-keyword">for</span> (<span class="token-keyword">var</span> item <span class="token-keyword">in</span> belanjaan) {
+  <span class="token-function">print</span>(<span class="token-string">"Beli: $item"</span>);
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex items-center gap-3 mb-8 border-l-4 border-blue-500 pl-4">
+                <h2 class="text-2xl font-bold text-white uppercase tracking-tight">3. Kontrol Perulangan</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 rounded-xl border border-red-500/30 bg-red-500/5">
+                    <h4 class="text-red-400 font-bold mb-2 flex items-center gap-2"><i data-lucide="octagon-pause" class="w-5 h-5"></i> BREAK</h4>
+                    <p class="text-xs text-slate-400 mb-4">Menghentikan perulangan secara paksa saat kondisi tercapai.</p>
+                    <div class="bg-black/40 p-3 rounded font-mono text-xs text-slate-300">
+                        <span class="token-keyword">if</span> (i == <span class="token-number">4</span>) <span class="token-keyword">break</span>;
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-blue-500/30 bg-blue-500/5">
+                    <h4 class="text-blue-400 font-bold mb-2 flex items-center gap-2"><i data-lucide="skip-forward" class="w-5 h-5"></i> CONTINUE</h4>
+                    <p class="text-xs text-slate-400 mb-4">Melewati sisa kode di iterasi ini dan lanjut ke putaran berikutnya.</p>
+                    <div class="bg-black/40 p-3 rounded font-mono text-xs text-slate-300">
+                        <span class="token-keyword">if</span> (i == <span class="token-number">2</span>) <span class="token-keyword">continue</span>;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-card border-blue-500/50 bg-blue-500/5">
+            <h3 class="text-2xl font-bold text-white mb-6">Ringkasan Materi</h3>
+            <ul class="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> If-Else: Kondisi logika kompleks</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> Switch: Pilihan nilai tetap (Menu)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> For: Jumlah putaran diketahui</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> While: Bergantung pada kondisi</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> Do-While: Minimal jalan 1 kali</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> Break: Stop Paksa</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center mt-auto">
+        <p class="text-slate-500 text-sm">Materi MoonDev &copy; 2025. Jangan lupa makan biar ngga laper.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function copyCode(btn) {
+            const pre = btn.closest('.overflow-hidden').querySelector('pre');
+            navigator.clipboard.writeText(pre.innerText);
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> <span class="text-blue-400 font-medium">Copied!</span>';
+            lucide.createIcons();
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                lucide.createIcons();
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 2: Operators - MoonDevs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md">
+        <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-4">
+                <a href="../dashboard.html" class="flex items-center justify-center rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                </a>
+                <h1 class="text-lg font-bold text-white">Sesi 2: <span class="text-blue-500">Operators</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-5xl px-6 py-12 flex-grow">
+        <section class="mb-12 text-center">
+            <span class="mb-4 inline-block rounded-full bg-blue-500/10 px-4 py-1.5 text-xs font-bold uppercase text-blue-400 border border-blue-500/20">Materi 2</span>
+            <h2 class="mb-4 text-4xl font-extrabold text-white">Dasar-Dasar Operator</h2>
+            <p class="text-slate-400">Mulai perjalanan belajarmu dari sini.</p>
+        </section>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="aritmatika.html" class="group border border-slate-700 bg-slate-800/50 p-6 rounded-2xl 
+                                             hover:border-blue-500 transition-all
+                                             flex flex-col items-center text-center">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600/20 text-blue-400">
+                    <i data-lucide="calculator" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Aritmatika</h3>
+            </a>
+
+            <a href="perbandingan.html" class="group border border-slate-700 bg-slate-800/50 p-6 rounded-2xl 
+                                               hover:border-emerald-500 transition-all
+                                               flex flex-col items-center text-center">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600/20 text-emerald-400">
+                    <i data-lucide="scale" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Perbandingan</h3>
+            </a>
+
+            <a href="logika.html" class="group border border-slate-700 bg-slate-800/50 p-6 rounded-2xl 
+                                         hover:border-purple-500 transition-all
+                                         flex flex-col items-center text-center">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-600/20 text-purple-400">
+                    <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Logika</h3>
+            </a>
+        </div>    
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center mt-auto">
+        <p class="text-slate-500 text-sm">Materi MoonDev &copy; 2025. Jangan lupa makan biar ngga laper.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

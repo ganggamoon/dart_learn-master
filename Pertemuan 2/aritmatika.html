@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmatika - MoonDevs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        code: {
+                            bg: '#1e1e1e',
+                            text: '#d4d4d4',
+                            keyword: '#569cd6',
+                            string: '#ce9178',
+                            comment: '#6a9955',
+                            func: '#dcdcaa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        pre { font-family: 'Fira Code', monospace; }
+        .td { border: 1px solid #334155; padding: 8px; text-align: center; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md px-6 py-4">
+        <div class="mx-auto max-w-4xl flex items-center gap-4">
+            <a href="index.html" class="flex items-center justify-center rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            </a>
+            <div class="h-6 w-[1px] bg-slate-700"></div>
+            <h1 class="text-lg font-bold text-slate-200">Materi: <span class="text-blue-500">Operator Aritmatika</span></h1>
+        </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-4xl px-6 py-10 flex-grow">
+        
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm text-center">
+            <header class="flex flex-col items-center gap-3 mb-6">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600/20 text-blue-400">
+                    <i data-lucide="calculator" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white">Operator Aritmatika</h2>
+            </header>
+            <p class="text-slate-300 leading-relaxed mx-auto max-w-2xl">
+                Operator aritmatika digunakan untuk melakukan operasi matematika dasar pada tipe data numerik seperti 
+                <span class="text-blue-400 font-bold font-mono text-sm">int</span> dan 
+                <span class="text-blue-400 font-bold font-mono text-sm">double</span>.
+            </p>
+            
+            <div class="mt-10 overflow-x-auto">
+                <table class="w-full border border-slate-700 text-sm">
+                    <thead class="bg-slate-800">
+                        <tr>
+                            <th class="td">Operator</th>
+                            <th class="td">Fungsi</th>
+                            <th class="td">Contoh</th>
+                            <th class="td">Hasil</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-slate-900">
+                        <tr><td class="td">+</td><td class="td">Penjumlahan</td><td class="td">5 + 3</td><td class="td">8</td></tr>
+                        <tr><td class="td">-</td><td class="td">Pengurangan</td><td class="td">5 - 3</td><td class="td">2</td></tr>
+                        <tr><td class="td">*</td><td class="td">Perkalian</td><td class="td">5 * 3</td><td class="td">15</td></tr>
+                        <tr><td class="td">/</td><td class="td">Pembagian</td><td class="td">5 / 2</td><td class="td">2.5</td></tr>
+                        <tr><td class="td">~/</td><td class="td">Pembagian bulat</td><td class="td">5 ~/ 2</td><td class="td">2</td></tr>
+                        <tr><td class="td">%</td><td class="td">Sisa bagi</td><td class="td">5 % 2</td><td class="td">1</td></tr>
+                        <tr><td class="td">++</td><td class="td">Increment</td><td class="td">a++</td><td class="td">a+1</td></tr>
+                        <tr><td class="td">--</td><td class="td">Decrement</td><td class="td">a--</td><td class="td">a-1</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="plus" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Operator Penjumlahan (+)</h4>
+            </div>     
+            <p class="text-slate-300">Operator <code class="text-blue-400">+</code> digunakan untuk <strong>menjumlahkan</strong> dua nilai.</p>
+
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2">
+                    <div class="flex gap-2">
+                        <div class="h-3 w-3 rounded-full bg-red-500"></div>
+                        <div class="h-3 w-3 rounded-full bg-yellow-500"></div>
+                        <div class="h-3 w-3 rounded-full bg-green-500"></div>
+                        <span class="ml-2 text-xs text-slate-400">penjumlahan.dart</span>
+                    </div>
+                    <button onclick="copyCode(this)" class="text-xs text-slate-400 hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">5</span>;
+  <span class="text-[#569cd6]">var</span> b = <span class="text-[#b5cea8]">3</span>;
+  <span class="text-[#569cd6]">var</span> c = a + b;
+  <span class="text-[#dcdcaa]">print</span>(c); <span class="text-[#6a9955]">// 8</span>
+}</pre>
+                </div>
+            </div>  
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="minus" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Operator Pengurangan (-)</h4>
+            </div>  
+            <p class="text-slate-300">Digunakan untuk <strong>mengurangi</strong> satu nilai dengan nilai lainnya.</p>
+
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2">
+                    <div class="flex gap-2"><div class="h-3 w-3 rounded-full bg-red-500"></div><div class="h-3 w-3 rounded-full bg-yellow-500"></div><div class="h-3 w-3 rounded-full bg-green-500"></div><span class="ml-2 text-xs text-slate-400">pengurangan.dart</span></div>
+                    <button onclick="copyCode(this)" class="text-xs text-slate-400 hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  <span class="text-[#569cd6]">var</span> b = <span class="text-[#b5cea8]">4</span>;
+  <span class="text-[#569cd6]">var</span> c = a - b;
+  <span class="text-[#dcdcaa]">print</span>(c); <span class="text-[#6a9955]">// 6</span>
+}</pre>
+                </div> 
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Perkalian (*)</h4>                
+            </div>  
+            <p class="text-slate-300">Digunakan untuk <strong>mengalikan</strong> satu nilai dengan nilai lainnya.</p>
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex items-center justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2">
+                    <span class="text-xs text-slate-400">perkalian.dart</span>
+                    <button onclick="copyCode(this)" class="text-xs text-slate-400 hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  <span class="text-[#569cd6]">var</span> b = <span class="text-[#b5cea8]">4</span>;
+  <span class="text-[#569cd6]">var</span> c = a * b;
+  <span class="text-[#dcdcaa]">print</span>(c); <span class="text-[#6a9955]">// 40</span>
+}</pre>
+                </div>
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="divide" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Pembagian Desimal (/)</h4>
+            </div>  
+            <p class="text-slate-300">Digunakan untuk <strong>membagi dua nilai</strong> dan <strong>hasilnya selalu bertipe double</strong>.</p>
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                    <span>pembagian.dart</span>
+                    <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  <span class="text-[#569cd6]">var</span> b = <span class="text-[#b5cea8]">4</span>;
+  <span class="text-[#569cd6]">var</span> c = a / b;
+  <span class="text-[#dcdcaa]">print</span>(c); <span class="text-[#6a9955]">// 2.5</span>
+}</pre>
+                </div>
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="divide-circle" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Pembagian Bulat (~/)</h4>
+            </div>
+            <p class="text-slate-300">Digunakan untuk membagi dan mengambil <strong>angka bulatnya saja</strong>.</p> 
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                    <span>pembagian_bulat.dart</span>
+                    <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  <span class="text-[#569cd6]">var</span> b = <span class="text-[#b5cea8]">4</span>;
+  <span class="text-[#569cd6]">var</span> c = a ~/ b;
+  <span class="text-[#dcdcaa]">print</span>(c); <span class="text-[#6a9955]">// 2</span>
+}</pre>
+                </div>
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="percent" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Sisa Bagi (%)</h4>
+            </div>  
+            <p class="text-slate-300">Digunakan untuk mengambil <strong>sisa</strong> dari hasil pembagian (Modulus).</p>
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                    <span>modulus.dart</span>
+                    <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  <span class="text-[#569cd6]">var</span> b = <span class="text-[#b5cea8]">4</span>;
+  <span class="text-[#569cd6]">var</span> c = a % b;
+  <span class="text-[#dcdcaa]">print</span>(c); <span class="text-[#6a9955]">// 2</span>
+}</pre>
+                </div>
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Increment (++)</h4>
+            </div>  
+            <p class="text-slate-300">Digunakan untuk <strong>menambah 1</strong> pada nilai variabel.</p>
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                    <span>increment.dart</span>
+                    <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  a++; 
+  <span class="text-[#dcdcaa]">print</span>(a); <span class="text-[#6a9955]">// 11</span>
+}</pre>
+                </div>
+            </div>
+        </article>
+
+        <article class="mb-10 rounded-2xl border border-slate-700 bg-slate-800/50 p-6 md:p-8 backdrop-blur-sm">
+            <div class="mb-6 flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
+                    <i data-lucide="trending-down" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Decrement (--)</h4>
+            </div> 
+            <p class="text-slate-300">Digunakan untuk <strong>mengurangi 1</strong> pada nilai variabel.</p> 
+            <div class="overflow-hidden rounded-lg border border-slate-700 bg-[#1e1e1e] shadow-xl mt-4">
+                <div class="flex justify-between border-b border-slate-700 bg-[#2d2d2d] px-4 py-2 text-xs text-slate-400">
+                    <span>decrement.dart</span>
+                    <button onclick="copyCode(this)" class="hover:text-white">Copy</button>
+                </div>
+                <div class="p-4 overflow-x-auto text-sm leading-relaxed text-[#d4d4d4]">
+<pre><span class="text-[#569cd6]">void</span> <span class="text-[#dcdcaa]">main</span>() {
+  <span class="text-[#569cd6]">var</span> a = <span class="text-[#b5cea8]">10</span>;
+  a--; 
+  <span class="text-[#dcdcaa]">print</span>(a); <span class="text-[#6a9955]">// 9</span>
+}</pre>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center mt-auto">
+        <p class="text-slate-500 text-sm">Materi MoonDev &copy; 2025. Jangan lupa makan biar ngga laper.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function copyCode(btn) {
+            const code = btn.closest('.shadow-xl').querySelector('pre').innerText;
+            navigator.clipboard.writeText(code);
+            btn.innerText = 'Copied!';
+            setTimeout(() => btn.innerText = 'Copy', 1500);
+        }
+    </script>
+</body>
+</html>
