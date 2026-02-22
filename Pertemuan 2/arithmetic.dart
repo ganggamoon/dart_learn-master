@@ -37,7 +37,7 @@
 // increment
 void main() {
   int counter = 0;
-
-  counter++;
+  print("var1 = ${counter+=2}");
+  print("var2 = ${counter}");
   print(counter); // 1
 }

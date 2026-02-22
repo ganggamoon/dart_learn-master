@@ -9,11 +9,12 @@ import 'dart:io';
 
 void main() {
   // Minta input nilai dari user
+  String input = "halo";
   stdout.write("Masukkan nilai ujian: ");
-  String? input = stdin.readLineSync();
+  input = stdin.readLineSync()!;
 
   // Ubah teks input menjadi angka (int)
-  int nilaiUser = int.parse(input!);
+  int nilaiUser = int.parse(input);
 
   // Operasi Perbandingan
   // Kita cek: Apakah nilaiUser lebih besar atau sama dengan 75?
