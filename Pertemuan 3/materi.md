@@ -93,7 +93,7 @@ void main() {
 
 Perulangan digunakan untuk menjalankan kode secara berulang.
 
-## 1. For Loop
+## 2.1 For Loop
 
 ### Digunakan Jika:
 Jumlah perulangan sudah diketahui.
@@ -110,7 +110,7 @@ for (int i = 1; i <= 10; i++) {
   print("Lantai $i");
 }
 ```
-## 2While Loop
+## 2.2 While Loop
 
 ### Digunakan Jika:
 Jumlah perulangan belum diketahui dan bergantung pada kondisi.
@@ -158,7 +158,7 @@ do {
 } while (passwordSalah == true);
 ```
 
-## 4. For-In Loop
+## 2.4 For-In Loop
 
 ### Digunakan Untuk:
 Mengakses setiap elemen dalam List atau koleksi data.
