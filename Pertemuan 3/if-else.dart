@@ -1,5 +1,3 @@
-
-
 /// Contoh program penggunaan `if`
 /// inisialisasi variabel [nilai] dan [standard] 
 /// yang digunakan untuk menampung nilai 
@@ -19,7 +17,7 @@
 /// ```
 
 // void main() {
-//   int nilai = 80, standard = 75;
+//   int nilai = 74, standard = 75;
 
 //   if (nilai >= standard) {
 //     print("Selamat anda lulus!");
@@ -73,18 +71,17 @@
 void main() {
   int nilai = 80;
 
-  String passMsg = "Selamat anda lulus dengan grade ";
+  String passMsg = "Selamat anda lulus dengan grade";
   String failMsg = "Maaf anda tidak lulus!";
 
-  if (nilai >= 90) {
+  if (nilai >= 90) 
     print("$passMsg A");
-  } else if (nilai >= 80) {
-    print("$passMsg B");
-  } else if (nilai >= 70) {
-    print("$passMsg C");
-  } else if (nilai >= 60) {
+  else if (nilai >= 80) 
+    print("$passMsg B"); 
+  else if (nilai >= 70) 
+    print("$passMsg C"); 
+  else if (nilai >= 60) 
     print("$passMsg D");
-  } else {
+  else  
     print(failMsg);
-  }
 }

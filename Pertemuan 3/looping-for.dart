@@ -6,8 +6,6 @@
 //   }
 // }
 
-
-
 void main() {
   print("Mencetak Angka 1 sampai 5");
 
