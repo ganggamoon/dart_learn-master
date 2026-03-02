@@ -48,6 +48,7 @@ void main() {
   print("var2 = ${counter--}");
   print("var3 = ${counter++}");
 
+  print("var2 = ${counter}");
   print(counter); // 1
 
   // int counter = 0;

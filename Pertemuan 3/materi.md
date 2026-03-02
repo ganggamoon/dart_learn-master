@@ -1,14 +1,14 @@
 # 1. Percabangan (Conditional Statement)
 
 Percabangan digunakan untuk menjalankan kode berdasarkan kondisi tertentu (true atau false).
-## a) If, Else If, dan Else
-### Pengertian
+## 1.1 If, Else If, dan Else
+### 1.1.1 Pengertian
 
 - `if` → Mengecek kondisi utama.
 - `else if` → Mengecek kondisi alternatif jika kondisi sebelumnya salah.
 - `else` → Dijalankan jika semua kondisi sebelumnya salah.
 
-### Sintaks Dasar
+### 1.1.2 Sintaks Dasar
 
 ```dart
 if (kondisi) {
@@ -40,22 +40,22 @@ void main() {
 }
 ```
 
-## Switch Case
+## 1.2 Switch Case
 
-### Pengertian
+### 1.2.1 Pengertian
 
 `switch` digunakan untuk memilih aksi berdasarkan nilai yang sudah pasti.
 
 Berbeda dengan `if` yang mengecek kondisi logika, `switch` membandingkan nilai secara langsung.
 
-### Komponen
+### 1.2.2 Komponen
 
 - `switch` → Variabel yang diperiksa.
 - `case` → Nilai pembanding.
 - `break` → Menghentikan proses agar tidak lanjut ke case berikutnya.
 - `default` → Dijalankan jika tidak ada case yang cocok.
 
-### Sintaks Dasar
+### 1.2.3 Sintaks Dasar
 
 ```dart
 switch (variabel) {
@@ -93,7 +93,7 @@ void main() {
 
 Perulangan digunakan untuk menjalankan kode secara berulang.
 
-## 1. For Loop
+## 2.1 For Loop
 
 ### Digunakan Jika:
 Jumlah perulangan sudah diketahui.
@@ -110,7 +110,7 @@ for (int i = 1; i <= 10; i++) {
   print("Lantai $i");
 }
 ```
-## 2While Loop
+## 2.2 While Loop
 
 ### Digunakan Jika:
 Jumlah perulangan belum diketahui dan bergantung pada kondisi.
@@ -158,7 +158,7 @@ do {
 } while (passwordSalah == true);
 ```
 
-## 4. For-In Loop
+## 2.4 For-In Loop
 
 ### Digunakan Untuk:
 Mengakses setiap elemen dalam List atau koleksi data.
