@@ -6,10 +6,53 @@
 //   }
 // }
 
-void main() {
-  print("Mencetak Angka 1 sampai 5");
+// void main() {
+//   print("Mencetak Angka 1 sampai 5");
 
-  for(int i = 0; i < 5; i++) {
-    print(i);
-  }
-}
+//   for(int i = 0; i < 5; i++) {
+//     print("angka $i");
+//   }
+// }
+
+// import 'dart:io';
+// void main() {
+//   print("Mencetak Segitiga menggunakan looping");
+
+//   print("================ 1 ================");
+//   for(int i = 0; i < 5; i++) {
+//     for(int j = 0; j <= i; j++) {
+//       stdout.write("* ");
+//     }
+//     stdout.write('\n');
+//   }
+
+//   print("================ 2 ================");
+//   for(int i = 0; i < 5; i++) {
+//     for(int j = 5; j > i; j--) {
+//       stdout.write("* ");
+//     }
+//     stdout.write('\n');
+//   }
+
+//   print("================ 3 ================");
+//   for(int i = 0; i < 5; i++) {
+//     for(int j = 5; j > i; j--) {
+//       stdout.write("  ");
+//     }
+//     for(int j = 0; j <= i; j++) {
+//       stdout.write("* ");
+//     }
+//     stdout.write('\n');
+//   }
+
+//   print("================ 4 ================");
+//   for(int i = 0; i < 5; i++) {
+//     for(int j = 0; j <= i; j++) {
+//       stdout.write("  ");
+//     }
+//     for(int j = 5; j > i; j--) {
+//       stdout.write("* ");
+//     }
+//     stdout.write('\n');
+//   }
+// }
