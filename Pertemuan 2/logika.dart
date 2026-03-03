@@ -8,9 +8,8 @@
 
 // OR
 void main() {
-  int suhu = 30;
+  int suhu =101;
   // Cek apakah suhu di bawah nol ATAU di atas 100
-  bool suhuEkstrem = (suhu < 0) || (suhu > 100);
-
-  print("Apakah suhu ekstrem? $suhuEkstrem"); // true (karena -5 < 0)
+  bool suhuEkstrem = !((suhu < 0) && (suhu > 100));
+  print("Apakah suhu ekstrem? ${suhuEkstrem}"); // true (karena -5 < 0)
 }
