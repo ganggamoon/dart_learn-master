@@ -10,13 +10,13 @@ void main() {
 
   // Cara menangani variabel nullable:
   // a. Pemeriksaan null secara eksplisit (cara paling aman)
-  if (hobi != null) {
+  if (hobi.isNotEmpty) {
     print('Panjang karakter hobi: ${hobi.length}');
   }
 
   // b. `!` (Bang Operator) -> Memberitahu Dart, "Saya yakin 100% variabel ini tidak null".
   // Hati-hati, jika ternyata null, aplikasi akan crash!
-  print('Panjang karakter hobi (dengan !): ${hobi!.length}');
+  print('Panjang karakter hobi (dengan !): ${hobi.length}');
 
   // c. `late` -> Berjanji pada Dart bahwa kita akan menginisialisasi variabel ini nanti sebelum digunakan.
   // Jika kita mencoba menggunakannya sebelum diinisialisasi, akan terjadi error.

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void main() {
   // `var` -> Dart akan secara otomatis menebak tipe datanya (type inference).
   var greeting = 'Halo Peserta!'; // Dart menebak ini adalah String
