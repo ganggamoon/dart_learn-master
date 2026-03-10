@@ -8,7 +8,9 @@ void main() {
   // Deklarasi variabel dengan tipe data eksplisit.
   // Tipe Data: String (Teks)
   String nama = 'Eri';
-  print('Nama saya: $nama'); // $ adalah cara untuk memasukkan variabel ke dalam String (interpolation)
+  print(
+    'Nama saya: $nama',
+  ); // $ adalah cara untuk memasukkan variabel ke dalam String (interpolation)
 
   // Tipe Data: int (Bilangan Bulat)
   int umur = 20;

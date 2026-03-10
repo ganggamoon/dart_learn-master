@@ -15,7 +15,8 @@ void main() {
   stdout.write("Nama: ");
   String nama = stdin.readLineSync()!; // apa bedanya pakai nullable
   stdout.write("Jurusan: ");
-  String jurusan = stdin.readLineSync()!; // apa bedanya pakai sama bang operator
+  String jurusan = stdin
+      .readLineSync()!; // apa bedanya pakai sama bang operator
   stdout.write("Jalur (Reguler, Karyawan): ");
   String jalur = stdin.readLineSync()!;
 
@@ -25,7 +26,7 @@ void main() {
   print("NIM: $jurusan");
 
   switch (jalur) {
-    case "reguler": 
+    case "reguler":
       print("jalur: $jalur");
       print("---------------------------");
       print("biaya: Rp. 2.000.000,00");

@@ -1,15 +1,15 @@
 /// Contoh program penggunaan `if`
-/// inisialisasi variabel [nilai] dan [standard] 
-/// yang digunakan untuk menampung nilai 
+/// inisialisasi variabel [nilai] dan [standard]
+/// yang digunakan untuk menampung nilai
 /// dari nilai mahasiswa dan standard penilaian.
-/// 
-/// gunakan keyword `if` untuk mengatur 
-/// alur proses dari sebuah 
+///
+/// gunakan keyword `if` untuk mengatur
+/// alur proses dari sebuah
 /// jika memenuhi kondisi yang telah ditentukan.
 /// kode yang di proses dengan kondisi tertentu
 /// harus didalam blok `if` agar dapat berjalan sesuai kondisi.
-/// 
-/// syntax: 
+///
+/// syntax:
 /// ```
 /// if (statements) {
 ///   // your code here
@@ -26,12 +26,11 @@
 //   print("Maaf anda tidak lulus!");
 // }
 
-
 /// Contoh program penggunaan `if else`
-/// gunakan keyword `else` untuk menangani 
+/// gunakan keyword `else` untuk menangani
 /// kondisi jika statement pada `if` tidak terpenuhi.
-/// 
-/// syntax: 
+///
+/// syntax:
 /// ```
 /// if (statements) {
 ///   // code if true
@@ -51,13 +50,13 @@
 // }
 
 /// Contoh program penggunaan `if else-if else`
-/// 
-/// gunakan keyword `else if` untuk menambahkan 
+///
+/// gunakan keyword `else if` untuk menambahkan
 /// kondisi lain jika kondisi pertama tidak terpenuhi.
-/// keyword `else` digunakan sebagai kondisi terakhir 
+/// keyword `else` digunakan sebagai kondisi terakhir
 /// jika semua kondisi sebelumnya tidak terpenuhi.
-/// 
-/// syntax: 
+///
+/// syntax:
 /// ```
 /// if (statements) {
 ///   // code if true
@@ -74,14 +73,14 @@ void main() {
   String passMsg = "Selamat anda lulus dengan grade";
   String failMsg = "Maaf anda tidak lulus!";
 
-  if (nilai >= 90) 
+  if (nilai >= 90)
     print("$passMsg A");
-  else if (nilai >= 80) 
-    print("$passMsg B"); 
-  else if (nilai >= 70) 
-    print("$passMsg C"); 
-  else if (nilai >= 60) 
+  else if (nilai >= 80)
+    print("$passMsg B");
+  else if (nilai >= 70)
+    print("$passMsg C");
+  else if (nilai >= 60)
     print("$passMsg D");
-  else  
+  else
     print(failMsg);
 }

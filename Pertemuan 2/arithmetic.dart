@@ -1,4 +1,4 @@
-// penjumlahan 
+// penjumlahan
 // void main() {
 //   var a = 5;
 //   var b = 109;
@@ -36,7 +36,7 @@
 // // increment
 // void main() {
 //   int counter = 5;
-//   --counter; 
+//   --counter;
 //   // counter-=2;
 //   print(counter); // 1
 // }
@@ -44,7 +44,7 @@
 // post Incr
 void main() {
   int counter = 0;
-  print("var1 = ${counter+=2}");
+  print("var1 = ${counter += 2}");
   print("var2 = ${counter--}");
   print("var3 = ${counter++}");
 
@@ -55,5 +55,4 @@ void main() {
   // print("var1 = ${++counter}");
   // print("var2 = ${counter}");
   // print(counter); // 1
-
 }

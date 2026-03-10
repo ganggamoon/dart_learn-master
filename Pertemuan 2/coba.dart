@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   // 1. Kasih instruksi dulu ke user (Output)
-  stdout.write("Masukkan nama: "); 
+  stdout.write("Masukkan nama: ");
   // 2. Baru minta input (Input)
   String? inputNama = stdin.readLineSync();
 

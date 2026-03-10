@@ -34,7 +34,7 @@
 //     }
 //     stdout.write("> ");
 //     String input = stdin.readLineSync()!;
-    
+
 //     if (input == "exit") {
 //       print("Bye bye...");
 //       break;
@@ -85,12 +85,11 @@ void main() {
       print("Login success!");
       code = 4;
     }
-
-  } while(code < 3);
+  } while (code < 3);
 
   if (code == 4) {
     print("Welcome to dashboard");
     return;
-  } 
+  }
   print("Login failed!");
 }
